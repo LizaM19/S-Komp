@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace S_Komp
 {
-    
     public partial class Form3 : Form
     {
-
         public Form3()
         {
             InitializeComponent();
@@ -41,7 +33,8 @@ namespace S_Komp
             }
         }
 
-        private void saveFile() {
+        private void saveFile()
+        {
             DateTime now = DateTime.Now;
             Random rnd = new Random();
             int value = rnd.Next(10, 99);
@@ -53,15 +46,18 @@ namespace S_Komp
             {
                 writer.WriteLineAsync(text);
             }
-/*            using (StreamWriter writer = new StreamWriter(pathConf, true))
-            {
-                writer.WriteLineAsync("-"+value);
-            }*/
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = string.Empty;
+        }
+
+        private void Form3_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.Capture = false;
+            Message m = Message.Create(base.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            this.WndProc(ref m);
         }
     }
 }

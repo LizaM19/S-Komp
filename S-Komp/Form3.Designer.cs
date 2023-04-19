@@ -90,6 +90,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.Text = "Form3";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form3_MouseDown);
             this.ResumeLayout(false);
 
         }
