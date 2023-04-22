@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace S_Komp
 {
@@ -29,23 +28,39 @@ namespace S_Komp
                 button2.Text = "Редактировать";
                 richTextBox1.Enabled = false;
                 saveFile();
-
             }
         }
 
-        private void saveFile()
+        private bool saveFile()
         {
-            DateTime now = DateTime.Now;
-            Random rnd = new Random();
-            int value = rnd.Next(10, 99);
-            string path = now.ToString("-" + value) + ".txt";
-            //string pathConf = "conf.txt";
-            string text = richTextBox1.Text;
 
-            using (StreamWriter writer = new StreamWriter(path, false))
+            if (label1.Text == "q")
             {
-                writer.WriteLineAsync(text);
+                for (int i = 0; i < 9; i++)
+                {
+                    string path = i + ".txt";
+                    if (!File.Exists(path))
+                    {
+                        string text = richTextBox1.Text;
+                        using (StreamWriter writer = new StreamWriter(path, false))
+                        {
+                            writer.WriteLineAsync(text);
+                        }
+                        return true;
+                    }
+                }
             }
+            else
+            {
+                string path = label1.Text;
+                string text = richTextBox1.Text;
+                using (StreamWriter writer = new StreamWriter(path, false))
+                {
+                    writer.WriteLineAsync(text);
+                }
+                return true;
+            }
+            return true;
         }
 
         private void button3_Click(object sender, EventArgs e)

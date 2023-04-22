@@ -51,7 +51,7 @@ namespace S_Komp
         private void readFile()
         {
             string searchDirectory = "C:/Users/Лиза/source/repos/S-Komp/S-Komp/bin/Debug/";
-            string[] AllFiles = Directory.GetFiles(searchDirectory, "-*.txt", SearchOption.AllDirectories);
+            string[] AllFiles = Directory.GetFiles(searchDirectory, "*.txt", SearchOption.AllDirectories);
             int count = AllFiles.Length;
 
             for (; count != 0; count--)
@@ -61,6 +61,8 @@ namespace S_Komp
                 TextReader readerS = new StreamReader(AllFiles[count - 1]);
                 string lineS = readerS.ReadToEnd();
                 form3.richTextBox1.Text = form3.richTextBox1.Text + lineS;
+                form3.label1.Text = AllFiles[count - 1];
+                //form3.button2.Text = "Редактировать";
             }
         }
     }
