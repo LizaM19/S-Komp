@@ -13,10 +13,12 @@ namespace S_Komp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string path = label1.Text;
+            File.Delete(path);
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void checkButton()
         {
             if (button2.Text == "Редактировать")
             {
@@ -29,6 +31,11 @@ namespace S_Komp
                 richTextBox1.Enabled = false;
                 saveFile();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            checkButton();
         }
 
         private bool saveFile()
@@ -45,7 +52,9 @@ namespace S_Komp
                         using (StreamWriter writer = new StreamWriter(path, false))
                         {
                             writer.WriteLineAsync(text);
+                            writer.Close();
                         }
+                        
                         return true;
                     }
                 }
@@ -57,6 +66,7 @@ namespace S_Komp
                 using (StreamWriter writer = new StreamWriter(path, false))
                 {
                     writer.WriteLineAsync(text);
+                    writer.Close();
                 }
                 return true;
             }

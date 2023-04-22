@@ -45,7 +45,10 @@ namespace S_Komp
         private void button3_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
+            form3.button2.Text = "Сохранить";
+            form3.richTextBox1.Enabled = true;
             form3.Show();
+            
         }
 
         private void readFile()
@@ -57,12 +60,16 @@ namespace S_Komp
             for (; count != 0; count--)
             {
                 Form3 form3 = new Form3();
+                form3.button2.Text = "Редактировать";
+                form3.richTextBox1.Enabled = false;
                 form3.Show();
                 TextReader readerS = new StreamReader(AllFiles[count - 1]);
                 string lineS = readerS.ReadToEnd();
                 form3.richTextBox1.Text = form3.richTextBox1.Text + lineS;
                 form3.label1.Text = AllFiles[count - 1];
-                //form3.button2.Text = "Редактировать";
+                
+                readerS.Close();
+                
             }
         }
     }
