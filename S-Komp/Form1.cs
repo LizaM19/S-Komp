@@ -53,7 +53,7 @@ namespace S_Komp
 
         private void readFile()
         {
-            string searchDirectory = "C:/Users/Лиза/source/repos/S-Komp/S-Komp/bin/Debug/";
+            string searchDirectory = Application.StartupPath;
             string[] AllFiles = Directory.GetFiles(searchDirectory, "*.txt", SearchOption.AllDirectories);
             int count = AllFiles.Length;
 
