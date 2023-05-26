@@ -1,0 +1,16 @@
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\bin\Debug\S-Komp.exe.config
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\bin\Debug\S-Komp.exe
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\bin\Debug\S-Komp.pdb
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S_Komp.Form1.resources
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S_Komp.Properties.Resources.resources
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.csproj.GenerateResource.cache
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.csproj.CoreCompileInputs.cache
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.exe
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.pdb
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S_Komp.Form2.resources
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S_Komp.Form3.resources
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.csproj.AssemblyReference.cache
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\Лиза\source\repos\S-Komp\S-Komp\obj\Debug\S-Komp.csproj.CopyComplete
